@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NaA-G8-VsD">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="pencilKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallpaperflare.com_wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="r2O-sD-YXI" userLabel="0">
+                                <rect key="frame" x="0.0" y="153" width="393" height="596"/>
+                            </imageView>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aME-bQ-V9Y" customClass="PKCanvasView">
+                                <rect key="frame" x="0.0" y="153" width="393" height="596"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="r2O-sD-YXI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="CWG-cD-sQl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r2O-sD-YXI" secondAttribute="trailing" id="G6a-hS-qWD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="r2O-sD-YXI" secondAttribute="bottom" constant="20" id="R7I-NC-ijU"/>
+                            <constraint firstItem="aME-bQ-V9Y" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VDL-cx-kaI"/>
+                            <constraint firstItem="aME-bQ-V9Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="W2X-35-zr6"/>
+                            <constraint firstItem="aME-bQ-V9Y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="blF-uE-wws"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aME-bQ-V9Y" secondAttribute="bottom" constant="20" id="cBr-bM-yVW"/>
+                            <constraint firstItem="r2O-sD-YXI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="m1t-Gx-2IS"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="OSu-ld-rcY">
+                        <leftBarButtonItems>
+                            <barButtonItem systemItem="undo" id="f8o-NL-fNu">
+                                <connections>
+                                    <action selector="undo:" destination="dkx-z0-nzr" id="Unm-fC-YKX"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="redo" id="emh-QS-LUb">
+                                <connections>
+                                    <action selector="redo:" destination="dkx-z0-nzr" id="Zug-t6-n6J"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Clear" id="vO6-px-zF7">
+                                <connections>
+                                    <action selector="btnClearTapped:" destination="BYZ-38-t0r" id="Kio-pO-Pze"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Image" id="iv1-sg-r9R">
+                                <connections>
+                                    <action selector="btnimageTapped:" destination="BYZ-38-t0r" id="VfW-HW-XGy"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="ImgView" destination="r2O-sD-YXI" id="Ll1-WO-Y2b"/>
+                        <outlet property="canvasView" destination="aME-bQ-V9Y" id="YuD-4b-PbA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1063.3587786259541" y="3.5211267605633805"/>
+        </scene>
+        <!--ImageVC-->
+        <scene sceneID="LsM-gk-e72">
+            <objects>
+                <viewController storyboardIdentifier="ImageVC" id="91a-5w-9ug" customClass="ImageVC" customModule="pencilKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fn7-6w-oOT">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uEh-ab-GM9">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gRK-VG-LQC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uEh-ab-GM9" firstAttribute="leading" secondItem="gRK-VG-LQC" secondAttribute="leading" id="Afp-Sf-IOd"/>
+                            <constraint firstAttribute="bottom" secondItem="uEh-ab-GM9" secondAttribute="bottom" id="TnC-pS-HkP"/>
+                            <constraint firstItem="uEh-ab-GM9" firstAttribute="top" secondItem="Fn7-6w-oOT" secondAttribute="top" id="uRv-bT-kbs"/>
+                            <constraint firstItem="gRK-VG-LQC" firstAttribute="trailing" secondItem="uEh-ab-GM9" secondAttribute="trailing" id="vDO-yM-gvV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imagCapture" destination="uEh-ab-GM9" id="k6C-9S-jgf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BXk-9C-QZT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1762.5954198473282" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jnC-io-ajo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NaA-G8-VsD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wu0-6r-9E3">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="FbZ-HL-AuD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s0O-Lg-3HI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.64122137404578" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="wallpaperflare.com_wallpaper" width="3584" height="2240"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
