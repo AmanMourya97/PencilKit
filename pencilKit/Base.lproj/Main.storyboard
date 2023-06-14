@@ -17,28 +17,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallpaperflare.com_wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="r2O-sD-YXI" userLabel="0">
-                                <rect key="frame" x="0.0" y="153" width="393" height="596"/>
-                            </imageView>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aME-bQ-V9Y" customClass="PKCanvasView">
-                                <rect key="frame" x="0.0" y="153" width="393" height="596"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5CY-p1-ltN">
+                                <rect key="frame" x="0.0" y="123" width="393" height="626"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="r2O-sD-YXI" userLabel="0">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="626"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="r2O-sD-YXI" secondAttribute="trailing" id="BAj-oo-7Nf"/>
+                                    <constraint firstAttribute="bottom" secondItem="r2O-sD-YXI" secondAttribute="bottom" id="OGf-Xq-puU"/>
+                                    <constraint firstItem="r2O-sD-YXI" firstAttribute="centerY" secondItem="5CY-p1-ltN" secondAttribute="centerY" id="S7j-Ir-AsO"/>
+                                    <constraint firstItem="r2O-sD-YXI" firstAttribute="top" secondItem="5CY-p1-ltN" secondAttribute="top" id="Yw3-cx-436"/>
+                                    <constraint firstItem="r2O-sD-YXI" firstAttribute="centerX" secondItem="5CY-p1-ltN" secondAttribute="centerX" id="ncd-iH-Mf8"/>
+                                    <constraint firstItem="r2O-sD-YXI" firstAttribute="leading" secondItem="5CY-p1-ltN" secondAttribute="leading" id="zRw-IU-p5l"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Jty-Cd-m3q"/>
+                                </connections>
+                            </scrollView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aME-bQ-V9Y" customClass="PKCanvasView">
+                                <rect key="frame" x="0.0" y="123" width="393" height="626"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="r2O-sD-YXI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="CWG-cD-sQl"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r2O-sD-YXI" secondAttribute="trailing" id="G6a-hS-qWD"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="r2O-sD-YXI" secondAttribute="bottom" constant="20" id="R7I-NC-ijU"/>
-                            <constraint firstItem="aME-bQ-V9Y" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VDL-cx-kaI"/>
-                            <constraint firstItem="aME-bQ-V9Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="W2X-35-zr6"/>
-                            <constraint firstItem="aME-bQ-V9Y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="blF-uE-wws"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aME-bQ-V9Y" secondAttribute="bottom" constant="20" id="cBr-bM-yVW"/>
-                            <constraint firstItem="r2O-sD-YXI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="m1t-Gx-2IS"/>
+                            <constraint firstItem="5CY-p1-ltN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="2zP-8w-aEm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aME-bQ-V9Y" secondAttribute="bottom" constant="20" id="4aY-HY-uF3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5CY-p1-ltN" secondAttribute="trailing" id="H4w-86-duc"/>
+                            <constraint firstItem="aME-bQ-V9Y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="KeM-sx-tAF"/>
+                            <constraint firstItem="aME-bQ-V9Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="N6u-3Z-pPN"/>
+                            <constraint firstItem="5CY-p1-ltN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NId-Lc-kDw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5CY-p1-ltN" secondAttribute="bottom" constant="20" id="cNv-Fe-cFN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aME-bQ-V9Y" secondAttribute="trailing" id="wFL-xU-CgN"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="OSu-ld-rcY">
+                        <nil key="title"/>
                         <leftBarButtonItems>
                             <barButtonItem systemItem="undo" id="f8o-NL-fNu">
                                 <connections>
@@ -51,6 +68,15 @@
                                 </connections>
                             </barButtonItem>
                         </leftBarButtonItems>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="jfa-yq-Wje">
+                            <rect key="frame" x="169.33333333333334" y="5" width="54.666666666666657" height="34.333333333333336"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Add"/>
+                            <connections>
+                                <action selector="BtnAddImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B2h-bS-qXa"/>
+                            </connections>
+                        </button>
                         <rightBarButtonItems>
                             <barButtonItem title="Clear" id="vO6-px-zF7">
                                 <connections>
@@ -67,6 +93,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="ImgView" destination="r2O-sD-YXI" id="Ll1-WO-Y2b"/>
+                        <outlet property="ScrollView" destination="5CY-p1-ltN" id="x0m-TL-5zd"/>
                         <outlet property="canvasView" destination="aME-bQ-V9Y" id="YuD-4b-PbA"/>
                     </connections>
                 </viewController>
@@ -83,18 +110,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uEh-ab-GM9">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="119" width="393" height="650"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uma-CO-6on">
+                                <rect key="frame" x="333" y="64" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="6QQ-7d-Yl8"/>
+                                    <constraint firstAttribute="height" constant="50" id="yvs-3H-p5A"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.down.app" catalog="system"/>
+                                <connections>
+                                    <action selector="btnDownloadImgAction:" destination="91a-5w-9ug" eventType="touchUpInside" id="9qF-V4-2zo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gRK-VG-LQC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="uEh-ab-GM9" firstAttribute="leading" secondItem="gRK-VG-LQC" secondAttribute="leading" id="Afp-Sf-IOd"/>
-                            <constraint firstAttribute="bottom" secondItem="uEh-ab-GM9" secondAttribute="bottom" id="TnC-pS-HkP"/>
-                            <constraint firstItem="uEh-ab-GM9" firstAttribute="top" secondItem="Fn7-6w-oOT" secondAttribute="top" id="uRv-bT-kbs"/>
-                            <constraint firstItem="gRK-VG-LQC" firstAttribute="trailing" secondItem="uEh-ab-GM9" secondAttribute="trailing" id="vDO-yM-gvV"/>
+                            <constraint firstItem="gRK-VG-LQC" firstAttribute="bottom" secondItem="uEh-ab-GM9" secondAttribute="bottom" id="4ey-k4-tPB"/>
+                            <constraint firstItem="uma-CO-6on" firstAttribute="top" secondItem="gRK-VG-LQC" secondAttribute="top" constant="5" id="F3o-Wp-Jjv"/>
+                            <constraint firstItem="uEh-ab-GM9" firstAttribute="leading" secondItem="gRK-VG-LQC" secondAttribute="leading" id="jSM-fU-FZD"/>
+                            <constraint firstItem="gRK-VG-LQC" firstAttribute="trailing" secondItem="uma-CO-6on" secondAttribute="trailing" constant="10" id="tDb-Yp-LDO"/>
+                            <constraint firstItem="uEh-ab-GM9" firstAttribute="top" secondItem="uma-CO-6on" secondAttribute="bottom" constant="5" id="tZE-xt-zZP"/>
+                            <constraint firstItem="uEh-ab-GM9" firstAttribute="trailing" secondItem="gRK-VG-LQC" secondAttribute="trailing" id="zzB-qn-hDH"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="imagCapture" destination="uEh-ab-GM9" id="k6C-9S-jgf"/>
                     </connections>
@@ -123,7 +166,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="wallpaperflare.com_wallpaper" width="3584" height="2240"/>
+        <image name="arrow.down.app" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
